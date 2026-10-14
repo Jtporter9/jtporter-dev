@@ -3,17 +3,17 @@
 
 export const profile = {
   name: 'JT Porter',
-  role: 'Software Engineer',
+  role: 'Senior Software Engineer',
   location: 'Utah',
   email: 'jtporter9@gmail.com',
   github: 'https://github.com/jtporter9',
   linkedin: 'https://linkedin.com/in/jtporter9',
   tagline: 'I build software that makes a difference — and help teams ship it.',
   summary:
-    'Full-stack engineer with 10 years across early-stage startups and a Fortune 250. ' +
-    'I was one of the first five engineers at a company that grew 7x and was acquired, ' +
-    'led a team of seven to ship a consumer app, and care a lot about design systems, ' +
-    'clean UI, and the people I build with.',
+    'Senior full-stack engineer with 10 years across early-stage startups, a Fortune 250, ' +
+    'and enterprise SaaS. I build complex, interactive React interfaces on .NET backends, ' +
+    'led a team of 7 to ship a consumer app, and was one of the first five employees at a ' +
+    'startup that grew 7x and was acquired.',
 };
 
 export type Job = {
@@ -33,17 +33,16 @@ export const experience: Job[] = [
   {
     company: 'TimeShareWare',
     location: 'Kaysville, UT',
-    title: 'Software Engineer',
+    title: 'Senior Software Engineer',
     start: 'Aug 2022',
     end: 'Present',
-    blurb: 'TODO: one sentence on what TimeShareWare builds and who uses it.',
+    blurb: 'Enterprise timeshare management platform used by large resort operators such as Vidanta.',
     highlights: [
-      'Ship new features and fix defects across client-facing products.',
-      'Help build and maintain the company’s shared design library.',
-      'TODO: your biggest project here — what it was, your role, the result.',
-      'TODO: a number (performance, adoption, time saved, bugs closed, etc.).',
+      'Led the rebuild and redesign of the Room Matrix, a highly interactive drag-and-drop tool for managing resort room assignments.',
+      'Build complex, performance-sensitive UI in React/Redux and Axios on a C# / .NET backend.',
+      'Adopted Claude Code and AI-assisted development in day-to-day engineering work.',
+      'Ship features and fix defects for enterprise clients; help build and maintain the shared design library.',
     ],
-    todo: true,
   },
   {
     company: 'Readeo',
@@ -106,16 +105,17 @@ export const experience: Job[] = [
 ];
 
 export const skills = {
-  'Languages & frameworks': ['TypeScript', 'JavaScript', 'React', 'Redux', 'Node', 'Angular', 'Vue', '.NET / C#', 'SQL', 'PHP'],
-  'UI & craft': ['Design systems', 'CSS / Sass', 'Accessibility', 'Responsive UI'],
-  'Ways of working': ['Team leadership', 'Code review', 'Scrum / Agile', 'Fluent Spanish'],
+  Frontend: ['React', 'Redux', 'TypeScript / JavaScript', 'Axios', 'Drag-and-drop & interactive UI', 'Design systems', 'CSS / Sass'],
+  Backend: ['C# / .NET', 'SQL', 'Node'],
+  'Tools & AI': ['Claude Code / AI-assisted development', 'Git', 'Jest'],
+  Other: ['Team leadership', 'Code review', 'Scrum / Agile', 'Fluent Spanish'],
 };
 
 export const education = [
   {
     school: 'Utah Valley University',
     location: 'Orem, UT',
-    detail: 'B.S. Web Design & Development — Web and App Development emphasis',
+    detail: 'B.S. Web Design & Development',
     year: '2018',
     note: 'Vice President, UVU Men’s Club Lacrosse',
   },
@@ -131,7 +131,8 @@ export const education = [
 export const now = {
   updated: 'October 2026',
   items: [
-    'Engineering at TimeShareWare. TODO: what you’re focused on right now.',
+    'Senior engineer at TimeShareWare, building the Room Matrix and other UI-heavy tools for resort operators.',
+    'Leaning into AI-assisted development with Claude Code, and learning a lot.',
     'Rebuilding this site (you’re looking at it).',
     'TODO: something outside work — a hobby, a trip, a book.',
   ],
