@@ -36,12 +36,13 @@ export const experience: Job[] = [
     title: 'Senior Software Engineer',
     start: 'Aug 2022',
     end: 'Present',
-    blurb: 'Enterprise timeshare management platform used by large resort operators such as Vidanta.',
+    blurb: 'Enterprise timeshare management platform used by 15 large resort operators across multiple countries, including Vidanta.',
     highlights: [
-      'Led the rebuild and redesign of the Room Matrix, a highly interactive drag-and-drop tool for managing resort room assignments.',
-      'Build complex, performance-sensitive UI in React/Redux and Axios on a C# / .NET backend.',
-      'Adopted Claude Code and AI-assisted development in day-to-day engineering work.',
-      'Ship features and fix defects for enterprise clients; help build and maintain the shared design library.',
+      'Rebuilt the Room Matrix as a drag-and-drop board for assigning reservations to rooms, moving dates, and blocking rooms for maintenance, replacing a version with no drag-and-drop and recurring assignment and display issues.',
+      'Helped build out the reservation booking flow.',
+      'Go-to engineer for design and styling; redesigned many layers of the application and help maintain the shared design library.',
+      'Adopted Claude Code for AI-assisted development, sharply speeding up my delivery and learning and helping the team ship more.',
+      'Build React/Redux and Axios UI on a C# / .NET backend.',
     ],
   },
   {
