@@ -1,0 +1,127 @@
+---
+import { profile } from '../data/profile';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = profile.tagline } = Astro.props;
+const pageTitle = title ? `${title} — ${profile.name}` : `${profile.name} — ${profile.role}`;
+const path = Astro.url.pathname;
+const nav = [
+  { href: '/#work', label: 'Work' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/now', label: 'Now' },
+  { href: '/resume', label: 'Resume' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/">JT Porter</a>
+        <nav aria-label="Primary">
+          {nav.map((n) => <a href={n.href} aria-current={path === n.href ? 'page' : undefined}>{n.label}</a>)}
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© {new Date().getFullYear()} {profile.name}</p>
+        <p>
+          <a href={`mailto:${profile.email}`}>Email</a>
+          <a href={profile.github}>GitHub</a>
+          <a href={profile.linkedin}>LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --ink: #1c1917;
+    --muted: #6b635c;
+    --line: #e7e0d6;
+    --accent: #8a2c3b;
+    --accent-soft: #f4e6e4;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --wrap: 68rem;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151312;
+      --surface: #1e1b19;
+      --ink: #f2ede6;
+      --muted: #a49a90;
+      --line: #2f2a26;
+      --accent: #e28b97;
+      --accent-soft: #33221f;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 1.0625rem/1.65 var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; margin: 0; }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.25rem; }
+  .eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.75rem; }
+  .muted { color: var(--muted); }
+  .todo { background: #fff3bf; color: #5c4400; padding: 0 0.25em; border-radius: 3px; }
+  @media (prefers-color-scheme: dark) { .todo { background: #4a3b00; color: #ffe58a; } }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--surface); padding: 0.5rem 1rem; z-index: 10; }
+
+  .site-header { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; height: 3.75rem; gap: 1rem; }
+  .brand { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; text-decoration: none; }
+  nav { display: flex; gap: 1.25rem; font-size: 0.95rem; }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a:hover, nav a[aria-current='page'] { color: var(--ink); }
+  @media (max-width: 480px) { nav { gap: 0.9rem; font-size: 0.9rem; } }
+
+  .site-footer { border-top: 1px solid var(--line); margin-top: 6rem; padding: 2rem 0; font-size: 0.9rem; color: var(--muted); }
+  .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-inner p { margin: 0; display: flex; gap: 1.25rem; }
+
+  @media print {
+    .site-header, .site-footer, .skip, .no-print { display: none !important; }
+    body { background: #fff; color: #000; font-size: 10.5pt; }
+  }
+</style>

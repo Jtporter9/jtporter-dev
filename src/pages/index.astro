@@ -1,0 +1,144 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { profile, experience } from '../data/profile';
+import heroImg from '../assets/jt-lake-louise.jpg';
+
+const work = [
+  {
+    href: '/work/lowestmed',
+    kicker: 'LowestMed · 2016–2018',
+    title: 'Employee #5 to acquisition',
+    stat: '7k → 50k+',
+    statLabel: 'monthly transactions',
+    body: 'Helped a five-person prescription-discount startup grow 7x and get acquired by RetailMeNot.',
+  },
+  {
+    href: '/work/rx-saver',
+    kicker: 'RetailMeNot · 2018–2019',
+    title: 'Rewriting Rx Saver in React',
+    stat: '+40%',
+    statLabel: 'frontend test coverage',
+    body: 'Moved a consumer health product from Angular to React/Redux without slowing down shipping.',
+  },
+  {
+    href: '/work/readeo',
+    kicker: 'Readeo · 2020–2022',
+    title: 'Leading a team to the app stores',
+    stat: '7',
+    statLabel: 'engineers led',
+    body: 'Ran engineering for a family reading app and launched it on iOS and Android.',
+  },
+];
+---
+
+<Base>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">{profile.role} · {profile.location}</p>
+      <h1>{profile.tagline}</h1>
+      <p class="lede">{profile.summary}</p>
+      <p class="cta">
+        <a class="btn" href="#work">See my work</a>
+        <a class="btn ghost" href="/resume">Resume</a>
+      </p>
+    </div>
+    <figure class="hero-photo">
+      <Image src={heroImg} alt="JT Porter standing in front of a frozen Lake Louise" width={1200} widths={[480, 800, 1200]} sizes="(max-width: 860px) 100vw, 26rem" loading="eager" />
+    </figure>
+  </section>
+
+  <section id="work" class="wrap section">
+    <p class="eyebrow">Selected work</p>
+    <h2>Stories, not screenshots</h2>
+    <div class="cards">
+      {work.map((w) => (
+        <a class="card" href={w.href}>
+          <p class="kicker">{w.kicker}</p>
+          <p class="stat">{w.stat}<span>{w.statLabel}</span></p>
+          <h3>{w.title}</h3>
+          <p class="muted">{w.body}</p>
+          <span class="more">Read the case study →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="experience" class="wrap section">
+    <p class="eyebrow">Experience</p>
+    <h2>Ten years, five teams</h2>
+    <ol class="timeline">
+      {experience.map((job) => (
+        <li>
+          <div class="when">{job.start} — {job.end}</div>
+          <div>
+            <h3>{job.company}</h3>
+            <p class="title">{job.title} · <span class="muted">{job.location}</span></p>
+            <p class:list={['muted', { todo: job.blurb.startsWith('TODO') }]}>{job.blurb}</p>
+            <ul>
+              {job.highlights.map((h) => <li class:list={{ todo: h.startsWith('TODO') }}>{h}</li>)}
+            </ul>
+            {job.caseStudy && <a class="more" href={job.caseStudy}>Case study →</a>}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section id="contact" class="wrap section contact">
+    <h2>Let’s talk.</h2>
+    <p class="muted">Open to interesting problems and good teams.</p>
+    <p class="cta">
+      <a class="btn" href={`mailto:${profile.email}`}>{profile.email}</a>
+      <a class="btn ghost" href={profile.linkedin}>LinkedIn</a>
+      <a class="btn ghost" href={profile.github}>GitHub</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .hero { display: grid; grid-template-columns: 1fr 26rem; gap: 3.5rem; align-items: center; padding-top: 4.5rem; padding-bottom: 2rem; }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+  .lede { font-size: 1.15rem; color: var(--muted); max-width: 38rem; margin: 1.5rem 0 2rem; }
+  .hero-photo { margin: 0; }
+  .hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 68% 50%; border-radius: 1.25rem; }
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; padding-top: 2.5rem; gap: 2rem; }
+    .hero-photo { order: -1; }
+    .hero-photo img { aspect-ratio: 16 / 10; object-position: 68% 60%; }
+  }
+
+  .cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0; }
+  .btn { display: inline-block; padding: 0.7rem 1.2rem; border-radius: 999px; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+  .btn:hover { color: var(--bg); filter: brightness(1.08); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  .section { padding-top: 5rem; scroll-margin-top: 3rem; }
+  .section > h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-bottom: 2rem; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  @media (max-width: 860px) { .cards { grid-template-columns: 1fr; } }
+  .card { display: flex; flex-direction: column; gap: 0.6rem; padding: 1.75rem; background: var(--surface); border: 1px solid var(--line); border-radius: 1rem; text-decoration: none; transition: transform 0.15s, border-color 0.15s; }
+  .card:hover { transform: translateY(-3px); border-color: var(--accent); color: inherit; }
+  .card h3 { font-size: 1.35rem; }
+  .card p { margin: 0; }
+  .kicker { font-size: 0.85rem; color: var(--muted); }
+  .stat { font-family: var(--serif); font-size: 2.6rem; font-weight: 600; color: var(--accent); line-height: 1; margin: 0.25rem 0 !important; }
+  .stat span { display: block; font-family: var(--sans); font-size: 0.8rem; font-weight: 500; color: var(--muted); margin-top: 0.4rem; letter-spacing: 0.02em; }
+  .more { margin-top: auto; padding-top: 0.5rem; font-size: 0.9rem; font-weight: 500; color: var(--accent); text-decoration: none; }
+
+  .timeline { list-style: none; padding: 0; margin: 0; }
+  .timeline > li { display: grid; grid-template-columns: 11rem 1fr; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--line); }
+  .timeline h3 { font-size: 1.4rem; }
+  .timeline .title { margin: 0.25rem 0 0.5rem; font-weight: 500; }
+  .timeline p { margin-top: 0; }
+  .timeline ul { margin: 0 0 0.75rem; padding-left: 1.1rem; }
+  .timeline ul li { margin-bottom: 0.3rem; }
+  .when { font-size: 0.9rem; color: var(--muted); padding-top: 0.4rem; font-variant-numeric: tabular-nums; }
+  @media (max-width: 640px) { .timeline > li { grid-template-columns: 1fr; gap: 0.25rem; } }
+
+  .contact { text-align: center; }
+  .contact h2 { margin-bottom: 0.5rem !important; }
+  .contact .cta { justify-content: center; margin-top: 1.5rem; }
+</style>

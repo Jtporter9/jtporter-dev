@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { now } from '../data/profile';
+---
+
+<Base title="Now" description="What JT Porter is focused on right now.">
+  <article class="wrap page">
+    <p class="eyebrow">Updated {now.updated}</p>
+    <h1>What I’m doing now</h1>
+    <ul>
+      {now.items.map((i) => <li class:list={{ todo: i.includes('TODO') }}>{i}</li>)}
+    </ul>
+    <p class="muted small">
+      This is a <a href="https://nownownow.com/about">now page</a>. If you haven’t seen me in a while, this is what I’d tell you.
+    </p>
+  </article>
+</Base>
+
+<style>
+  .page { max-width: 40rem; padding-top: 4rem; }
+  h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 1.5rem; }
+  ul { padding-left: 1.2rem; font-size: 1.15rem; }
+  li { margin-bottom: 0.75rem; }
+  .small { font-size: 0.9rem; margin-top: 2.5rem; }
+</style>
