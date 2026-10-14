@@ -1,0 +1,39 @@
+/* Matrix design tokens: dark-first, amber "occupied" accent, light theme mirrors it. */
+:root {
+  --bg: #0e1320;
+  --panel: #151b2b;
+  --fg: #dfe4ee;
+  --muted: #8d97ab;
+  --line: #232c40;
+  --accent: #f0b056;        /* "occupied" amber */
+  --accent-ink: #1a1206;
+  --danger: #f2766b;
+  --cell: 240, 176, 86;     /* accent as rgb for canvas */
+  --display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f5f3ee; --panel: #ffffff; --fg: #1b2130; --muted: #5d6679; --line: #dedad0;
+    --accent: #b8701a; --accent-ink: #ffffff; --danger: #c43d31; --cell: 184, 112, 26; color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f5f3ee; --panel: #ffffff; --fg: #1b2130; --muted: #5d6679; --line: #dedad0;
+  --accent: #b8701a; --accent-ink: #ffffff; --danger: #c43d31; --cell: 184, 112, 26; color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 400 1rem/1.7 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+#grid { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+a { color: var(--fg); text-decoration: none; }
+a:hover, a:focus-visible { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+main, .shell, .site-top, .site-footer { position: relative; z-index: 1; }
