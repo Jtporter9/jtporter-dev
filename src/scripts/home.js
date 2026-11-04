@@ -72,6 +72,7 @@ const ES = {
   j_lm: 'Empleado #5. Creé la búsqueda mientras escribes entre nombres de medicamentos de marca y genéricos mientras las transacciones mensuales crecían de 7 mil a más de 50 mil, hasta la adquisición.',
   open: 'Disponible para trabajar · Remoto de preferencia', nav_contact: 'Contacto',
   st1: 'Tiempo de carga de la Room Matrix', st2: 'Reconstrucción', st2v: '~2 meses', st3: 'Escala', st3v: 'Cientos de resorts',
+  p_hw_s: 'En línea', p_hw_d: 'Proyecto personal: ayudé a construir el sitio web de un negocio de bienestar.', visit: 'Visitar el sitio →',
   rm_more: 'Leer la historia de la Room Matrix →',
   p_rm: 'Reconstruyendo la Room Matrix', p_rm_d: 'Tiempo de carga tras la reconstrucción, antes de 30–90 segundos, en cientos de resorts.',
   ct_title: 'Construyamos algo juntos',

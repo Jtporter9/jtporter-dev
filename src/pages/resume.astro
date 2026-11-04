@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { profile, experience, skills, education } from '../data/profile';
+import { profile, experience, skills, education, projects } from '../data/profile';
 ---
 
 <Base title="Resume">
@@ -39,6 +39,13 @@ import { profile, experience, skills, education } from '../data/profile';
     </section>
 
     <section>
+      <h2>Projects</h2>
+      {projects.map((pr) => (
+        <p class="project"><strong>{pr.name}</strong> · <a href={pr.url}>{pr.url.replace('https://', '')}</a> · {pr.detail}</p>
+      ))}
+    </section>
+
+    <section>
       <h2>Skills</h2>
       <dl class="skills">
         {Object.entries(skills).map(([group, list]) => (
@@ -52,10 +59,9 @@ import { profile, experience, skills, education } from '../data/profile';
       {education.map((e) => (
         <div class="job">
           <div class="job-head">
-            <h3>{e.school}, <span>{e.detail}</span></h3>
+            <h3>{e.school}, <span>{e.detail}</span> <span class="muted edu-note">· {e.note}</span></h3>
             <span class="dates">{e.year}</span>
           </div>
-          <p class="muted note">{e.note}</p>
         </div>
       ))}
     </section>
@@ -80,13 +86,15 @@ import { profile, experience, skills, education } from '../data/profile';
   ul { margin: 0.35rem 0 0; padding-left: 1.1rem; }
   li { margin-bottom: 0.15rem; }
   .note { margin: 0.2rem 0 0; font-size: 0.9rem; }
+  .project { margin: 0; }
+  .edu-note { font-size: 0.9em; }
   .skills { margin: 0; display: grid; gap: 0.4rem; }
   .skills div { display: grid; grid-template-columns: 12rem 1fr; gap: 1rem; }
   .skills dt { font-weight: 600; }
   .skills dd { margin: 0; }
   @media (max-width: 640px) { .skills div { grid-template-columns: 1fr; gap: 0; } }
   @media print {
-    @page { margin: 0.45in 0.55in; }
+    @page { margin: 0.4in 0.55in; }
     :global(body) { font-size: 9pt; line-height: 1.36; }
     .resume { padding: 0; max-width: none; }
     h1 { font-size: 18pt; }

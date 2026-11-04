@@ -6,7 +6,7 @@ export const profile = {
   location: 'Utah · Open to remote',
   email: 'jtporter9@gmail.com',
   // Leave empty to hide the phone number on the resume.
-  phone: '',
+  phone: '(801) 623-7839',
   github: 'https://github.com/jtporter9',
   linkedin: 'https://linkedin.com/in/jtporter9',
   tagline: 'I build software that makes a difference — and help teams ship it.',
@@ -41,11 +41,11 @@ export const experience: Job[] = [
     blurb: 'Enterprise timeshare and resort management platform used by 7–10 resort companies, including Vidanta and Hyatt, across hundreds of resorts.',
     highlights: [
       'Rebuilt the Room Matrix in about 2 months, cutting load times from 30–90 seconds to 1–10 seconds with a faster data API and lazy loading, across hundreds of resorts and thousands of rooms.',
-      'Added drag-and-drop so staff assign reservations to rooms, move dates, and block rooms for maintenance directly on the board, replacing a version with recurring assignment and display bugs.',
+      'Added drag-and-drop for assigning reservations, moving dates, and blocking rooms for maintenance, fixing the old board’s assignment and display bugs.',
       'Built key screens in the reservation booking flow, including room search, booking, and paying with usage or points, integrating closely with backend APIs.',
-      'Implemented the modernized look and feel across much of the application as the UI team’s go-to engineer for design and styling.',
+      'Go-to UI engineer for implementing the modernized design across much of the app.',
       'Early adopter of Claude Code; taught the UI team Claude Skills and helped set up its shared AI context.',
-      'Reviewed code and ran releases for a ~7-person UI team (~15 engineers overall), in React, Redux, TypeScript, and Axios on a C# / .NET backend.',
+      'Reviewed code and ran releases for a ~7-person UI team (~15 engineers overall).',
     ],
     caseStudy: '/work/room-matrix',
   },
@@ -108,8 +108,16 @@ export const experience: Job[] = [
   },
 ];
 
+export const projects = [
+  {
+    name: 'Haven Wellness',
+    url: 'https://havenwellness.com',
+    detail: 'Side project: helped build the website for a wellness business.',
+  },
+];
+
 export const skills = {
-  Frontend: ['React', 'TypeScript', 'Redux', 'Axios', 'Drag-and-drop & interactive UI', 'Performance & lazy loading', 'Design systems', 'CSS / Sass', 'Figma'],
+  Frontend: ['React', 'TypeScript', 'Redux', 'Interactive & drag-and-drop UI', 'Performance', 'Design systems', 'CSS / Sass', 'Figma'],
   Backend: ['C# / .NET', 'Node.js', 'SQL Server / Postgres', 'REST APIs'],
   'Tools & AI': ['Claude Code & Claude Skills', 'Git', 'CI/CD', 'Docker', 'Azure / AWS', 'Jest'],
   Other: ['Team leadership', 'Code review & releases', 'Scrum / Agile', 'Fluent Spanish'],
