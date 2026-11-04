@@ -11,11 +11,10 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/jtporter9',
   tagline: 'I build software that makes a difference — and help teams ship it.',
   summary:
-    'Senior frontend-focused full-stack engineer with 10 years building React and TypeScript products, ' +
-    'from early-stage startups to a Fortune 250 and enterprise SaaS. Most recently rebuilt the Room Matrix ' +
-    'at TimeShareWare, cutting load times from 30–90 seconds to 1–10 seconds for resort companies like ' +
-    'Vidanta and Hyatt. Former engineering lead of a 7-person team, early adopter of AI-assisted ' +
-    'development, and fluent in Spanish.',
+    'Senior frontend-focused full-stack engineer with 10 years building React and TypeScript products at ' +
+    'startups, a Fortune 250, and enterprise SaaS. Most recently rebuilt TimeShareWare’s Room Matrix, cutting ' +
+    'load times from 30–90s to 1–10s for resort companies like Vidanta and Hyatt. Former lead of a ' +
+    '7-person team, early AI-assisted development adopter, fluent in Spanish.',
   openTo: 'Senior Frontend, Full-Stack, AI Software Engineer, and Engineering Lead roles. Remote preferred.',
 };
 
@@ -42,7 +41,7 @@ export const experience: Job[] = [
     highlights: [
       'Rebuilt the Room Matrix in about 2 months, cutting load times from 30–90 seconds to 1–10 seconds with a faster data API and lazy loading, across hundreds of resorts and thousands of rooms.',
       'Added drag-and-drop for assigning reservations, moving dates, and blocking rooms for maintenance, fixing the old board’s assignment and display bugs.',
-      'Built key screens in the reservation booking flow, including room search, booking, and paying with usage or points, integrating closely with backend APIs.',
+      'Built key booking-flow screens (room search, booking, and paying with usage or points) on top of backend APIs.',
       'Go-to UI engineer for implementing the modernized design across much of the app.',
       'Early adopter of Claude Code; taught the UI team Claude Skills and helped set up its shared AI context.',
       'Reviewed code and ran releases for a ~7-person UI team (~15 engineers overall).',
@@ -102,6 +101,8 @@ export const experience: Job[] = [
     highlights: [
       'One of five initial employees; helped grow monthly transactions from 7,000 to 50,000+ through the acquisition by RetailMeNot.',
       'Built search-as-you-type drug lookup across brand and generic names, suggesting matches while users typed.',
+      'Helped transition the product’s frontend from Angular to React.',
+      'Helped build a system that faxed files to pharmacies and doctors.',
       'Integrated with multiple affiliate APIs across frontend, backend, and database.',
     ],
     caseStudy: '/work/lowestmed',

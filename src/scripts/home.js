@@ -69,7 +69,7 @@ const ES = {
   j_readeo: 'Contratado como líder. Dirigí un equipo de 7 ingenieros además de sprints y planeación, y lancé la app de Readeo en App Store y Google Play.',
   j_pfg: 'Ayudé a crear la librería de diseño usada en toda esta empresa Fortune 250 y actualicé principal.com.',
   j_rmn: 'Migré Rx Saver de Angular a React/Redux y aumenté la cobertura de pruebas un 40%. Rx Saver fue adquirida después por GoodRx.',
-  j_lm: 'Empleado #5. Creé la búsqueda mientras escribes entre nombres de medicamentos de marca y genéricos mientras las transacciones mensuales crecían de 7 mil a más de 50 mil, hasta la adquisición.',
+  j_lm: 'Empleado #5. Ayudé a migrar el producto de Angular a React, creé la búsqueda de medicamentos mientras escribes y ayudé a construir un sistema que enviaba archivos por fax a farmacias y médicos, mientras las transacciones mensuales crecían de 7 mil a más de 50 mil.',
   open: 'Disponible para trabajar · Remoto de preferencia', nav_contact: 'Contacto',
   st1: 'Tiempo de carga de la Room Matrix', st2: 'Reconstrucción', st2v: '~2 meses', st3: 'Escala', st3v: 'Cientos de resorts',
   p_hw_s: 'En línea', p_hw_d: 'Proyecto personal: ayudé a construir el sitio web de un negocio de bienestar.', visit: 'Visitar el sitio →',
