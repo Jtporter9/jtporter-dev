@@ -15,6 +15,7 @@ import { profile, experience, skills, education } from '../data/profile';
       <p class="role">{profile.role} · {profile.location}</p>
       <p class="contact">
         <a href={`mailto:${profile.email}`}>{profile.email}</a>
+        {profile.phone && <a href={`tel:${profile.phone.replace(/[^+\d]/g, '')}`}>{profile.phone}</a>}
         <a href="https://jtporter.dev">jtporter.dev</a>
         <a href={profile.linkedin}>linkedin.com/in/jtporter9</a>
         <a href={profile.github}>github.com/jtporter9</a>
@@ -31,7 +32,7 @@ import { profile, experience, skills, education } from '../data/profile';
             <span class="dates">{job.start} – {job.end}</span>
           </div>
           <ul>
-            {job.highlights.map((h) => <li class:list={{ todo: h.startsWith('TODO') }}>{h}</li>)}
+            {job.highlights.map((h) => <li>{h}</li>)}
           </ul>
         </div>
       ))}

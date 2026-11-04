@@ -21,8 +21,6 @@ After acquiring LowestMed, RetailMeNot rebranded the product as **Rx Saver**. Th
 - Helped with the backend move from .NET to Java/Spring.
 - Led the redesign and refactor of the marketing site's WordPress theme.
 
-> **TODO:** How did you migrate without a big-bang rewrite (page by page? a strangler pattern?), and how long did it take?
-
 ## The result
 
 A modern, well-tested React codebase the team could ship on confidently, with 40% more of the frontend covered by tests.

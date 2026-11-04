@@ -12,12 +12,14 @@ import '../styles/home.css';
     <p class="drag-hint" id="drag-hint" data-i18n="hint_photo">Drag me. I snap to the grid.</p>
     <h1>JT Porter</h1>
     <p class="role" data-i18n="role">Senior Software Engineer</p>
+    <p class="open"><span class="dot" aria-hidden="true"></span><span data-i18n="open">Open to work · Remote preferred</span></p>
     <p class="pitch" data-i18n="pitch">I build interfaces people can grab, drag, and rely on, for resorts, families, and patients.</p>
     <ul class="nav">
       <li><a href="#about" data-i18n="nav_about">About</a></li>
       <li><a href="#now" data-i18n="nav_now">TimeShareWare</a></li>
       <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
       <li><a href="#work" data-i18n="nav_work">Projects</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
     </ul>
     <div class="foot">
       <a href="mailto:jtporter9@gmail.com">Email</a>
@@ -34,16 +36,22 @@ import '../styles/home.css';
   <main class="story" id="main">
     <section id="about" class="about">
       <h2 class="label" data-i18n="nav_about">About</h2>
-        <p data-i18n="about1">I’m a senior engineer at <strong>TimeShareWare</strong>, where I rebuilt the <strong>Room Matrix</strong>, a drag-and-drop board resort operators like Vidanta use to manage their rooms. It’s the kind of UI I love: dense, fast, and hard to get right.</p>
+        <p data-i18n="about1">For the last four years I was a senior engineer at <strong>TimeShareWare</strong>, where I rebuilt the <strong>Room Matrix</strong>, the drag-and-drop board resort companies like Vidanta and Hyatt use to manage thousands of rooms, and cut its load time from as long as 90 seconds to 10 or less. It’s the kind of UI I love: dense, fast, and hard to get right.</p>
         <p data-i18n="about2">Before that I led a team of seven at <strong>Readeo</strong> to ship a family reading app, and I was one of the first five employees at <strong>LowestMed</strong>, which grew 7x and was acquired by RetailMeNot.</p>
-        <p data-i18n="about3">These days I work in React and .NET, lean on Claude Code every day, and am happy to pair on a problem in English or Spanish.</p>
+        <p data-i18n="about3">I work mostly in React and TypeScript, lean on Claude Code every day, and am happy to pair on a problem in English or Spanish. I’m looking for a long-term team where I can stay hands-on and help shape the architecture and design decisions that make a product better.</p>
     </section>
 
     <section id="now" class="feature">
       <h2 class="label" data-i18n="nav_now">TimeShareWare</h2>
-      <p class="feature-meta" data-i18n="tsw_meta">Now · Senior Software Engineer · 2022 — Present</p>
+      <p class="feature-meta" data-i18n="tsw_meta">Most recent · Senior Software Engineer · 2022 — 2026</p>
       <h2 class="big" data-i18n="tsw_title">Building the tools resorts run on</h2>
-      <p class="lede" data-i18n="tsw_lede">TimeShareWare makes the platform that 15 large resort operators across multiple countries, including Vidanta, use to run their timeshare business. I work across the React/Redux frontend and the C# / .NET backend, and I’m the team’s go-to for design and styling.</p>
+      <p class="lede" data-i18n="tsw_lede">TimeShareWare makes the platform that 7–10 resort companies, including Vidanta and Hyatt, use to run hundreds of resorts. On a UI team of about seven, I built in React, Redux, and TypeScript on a C# / .NET backend, reviewed code, ran releases, and was the go-to engineer for design and styling.</p>
+
+      <dl class="stats">
+        <div><dt data-i18n="st1">Room Matrix load time</dt><dd>30–90s → 1–10s</dd></div>
+        <div><dt data-i18n="st2">Rebuild</dt><dd data-i18n="st2v">~2 months</dd></div>
+        <div><dt data-i18n="st3">Scale</dt><dd data-i18n="st3v">100s of resorts</dd></div>
+      </dl>
 
       <div class="demo-head">
         <h3 class="sub" data-i18n="demo_title">The Room Matrix</h3>
@@ -63,40 +71,41 @@ import '../styles/home.css';
       <ul class="built">
         <li><span data-i18n="b1"><strong>Rebuilt the Room Matrix with drag-and-drop.</strong> Staff assign reservations to rooms, move dates, and block rooms for maintenance right on the board.</span></li>
         <li><span data-i18n="b2"><strong>Replaced a board that couldn’t drag at all</strong> and had recurring problems assigning rooms and displaying stays correctly.</span></li>
-        <li><span data-i18n="b3"><strong>Used by resort teams in multiple countries</strong> across our 15 enterprise clients.</span></li>
+        <li><span data-i18n="b3"><strong>Made it fast.</strong> A faster data API and lazy loading took load times from 30–90 seconds down to 1–10, across thousands of rooms.</span></li>
       </ul>
 
       <div class="pillars">
-        <div><h4 data-i18n="pl1">Reservation booking</h4><p data-i18n="pl1d">Helped build out the booking flow guests and staff use to reserve stays.</p></div>
-        <div><h4 data-i18n="pl2">Design &amp; styling lead</h4><p data-i18n="pl2d">The go-to for design updates. Redesigned many layers of the application.</p></div>
-        <div><h4 data-i18n="pl3">AI-assisted dev</h4><p data-i18n="pl3d">Claude Code has sped up how fast I ship and learn, and helps our team get a lot more done.</p></div>
+        <div><h4 data-i18n="pl1">Reservation booking</h4><p data-i18n="pl1d">Built the room search, booking, and usage/points payment screens, wired closely to backend APIs.</p></div>
+        <div><h4 data-i18n="pl2">Design &amp; styling lead</h4><p data-i18n="pl2d">Implemented the modernized look and feel across much of the app.</p></div>
+        <div><h4 data-i18n="pl3">AI-assisted dev</h4><p data-i18n="pl3d">Early Claude Code adopter. Taught the team Claude Skills and set up our shared AI context.</p></div>
       </div>
+      <a class="cv" href="/work/room-matrix" data-i18n="rm_more">Read the Room Matrix story →</a>
     </section>
 
     <section id="experience">
       <h2 class="label" data-i18n="nav_exp">Experience</h2>
       <ol class="jobs">
         <li class="job current">
-          <div class="when" data-i18n="d_tsw">2022 — Now</div>
+          <div class="when">2022 — 2026</div>
           <div>
             <h3>Senior Software Engineer <span>· TimeShareWare</span></h3>
-            <p data-i18n="j_tsw">Room Matrix rebuild, reservation booking flow, and design and styling across the app, for 15 enterprise resort clients. More above.</p>
-            <ul class="tags"><li>React</li><li>Redux</li><li>Axios</li><li>C# / .NET</li><li>Claude Code</li></ul>
+            <p data-i18n="j_tsw">Rebuilt the Room Matrix (30–90s → 1–10s loads), built core booking screens, and led UI modernization for resort companies like Vidanta and Hyatt.</p>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>Redux</li><li>C# / .NET</li><li>Claude Code</li></ul>
           </div>
         </li>
         <li class="job">
           <div class="when">2020 — 2022</div>
           <div>
-            <h3>Engineer → Team Lead <span>· Readeo</span></h3>
-            <p data-i18n="j_readeo">Led 7 engineers and launched the Readeo app on the App Store and Google Play.</p>
-            <ul class="tags"><li>Leadership</li><li>Mobile launch</li></ul>
+            <h3>Engineering Team Lead <span>· Readeo</span></h3>
+            <p data-i18n="j_readeo">Hired as lead. Ran a team of 7 engineers plus sprints and planning, and launched the Readeo app on the App Store and Google Play.</p>
+            <ul class="tags"><li>React</li><li>Redux</li><li>Node.js</li><li>Leadership</li></ul>
           </div>
         </li>
         <li class="job">
           <div class="when">2019 — 2020</div>
           <div>
             <h3>Software Engineer <span>· Principal Financial Group</span></h3>
-            <p data-i18n="j_pfg">Shipped updates to principal.com and helped build a company-wide design library.</p>
+            <p data-i18n="j_pfg">Helped build the design library used across the whole Fortune 250 company, and shipped updates to principal.com.</p>
             <ul class="tags"><li>Design systems</li><li>Drupal</li></ul>
           </div>
         </li>
@@ -104,7 +113,7 @@ import '../styles/home.css';
           <div class="when">2018 — 2019</div>
           <div>
             <h3>Software Engineer <span>· RetailMeNot</span></h3>
-            <p data-i18n="j_rmn">Migrated Rx Saver from Angular to React/Redux and raised test coverage 40%.</p>
+            <p data-i18n="j_rmn">Migrated Rx Saver from Angular to React/Redux and raised test coverage 40%. Rx Saver was later acquired by GoodRx.</p>
             <ul class="tags"><li>React</li><li>Redux</li><li>Jest</li></ul>
           </div>
         </li>
@@ -112,7 +121,7 @@ import '../styles/home.css';
           <div class="when">2016 — 2018</div>
           <div>
             <h3>Full-Stack Engineer <span>· LowestMed</span></h3>
-            <p data-i18n="j_lm">Employee #5. Built autocorrecting drug search as monthly transactions grew from 7k to 50k+, through acquisition.</p>
+            <p data-i18n="j_lm">Employee #5. Built search-as-you-type across brand and generic drug names as monthly transactions grew from 7k to 50k+, through acquisition.</p>
             <ul class="tags"><li>Angular</li><li>.NET</li><li>SQL</li></ul>
           </div>
         </li>
@@ -123,10 +132,23 @@ import '../styles/home.css';
     <section id="work">
       <h2 class="label" data-i18n="nav_work">Projects</h2>
       <ul class="projects">
+        <li><a href="/work/room-matrix"><span class="stat">1–10s</span><h3 data-i18n="p_rm">Rebuilding the Room Matrix</h3><p data-i18n="p_rm_d">Load time after the rebuild, down from 30–90 seconds, for hundreds of resorts.</p><span class="more" data-i18n="more">Read the story →</span></a></li>
         <li><a href="/work/lowestmed"><span class="stat">7k→50k+</span><h3 data-i18n="p_lm">Employee #5 to acquisition</h3><p data-i18n="p_lm_d">Monthly transactions at LowestMed before RetailMeNot bought it.</p><span class="more" data-i18n="more">Read the story →</span></a></li>
         <li><a href="/work/rx-saver"><span class="stat">+40%</span><h3 data-i18n="p_rx">Rewriting Rx Saver in React</h3><p data-i18n="p_rx_d">Frontend test coverage after the Angular → React migration.</p><span class="more" data-i18n="more">Read the story →</span></a></li>
         <li><a href="/work/readeo"><span class="stat">7</span><h3 data-i18n="p_rd">Leading a team to the app stores</h3><p data-i18n="p_rd_d">Engineers I led to launch Readeo on iOS and Android.</p><span class="more" data-i18n="more">Read the story →</span></a></li>
       </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="label" data-i18n="nav_contact">Contact</h2>
+      <p class="feature-meta"><span data-i18n="open">Open to work · Remote preferred</span></p>
+      <h2 class="big" data-i18n="ct_title">Let’s build something together</h2>
+      <p class="lede" data-i18n="ct_body">I’m looking for senior frontend, full-stack, AI software engineering, or engineering lead roles, ideally remote, with a team I can grow with for the long haul. The fastest way to reach me is email or LinkedIn.</p>
+      <p class="ct-links">
+        <a class="btn" href="mailto:jtporter9@gmail.com">jtporter9@gmail.com</a>
+        <a class="btn ghost" href="https://linkedin.com/in/jtporter9">LinkedIn</a>
+        <a class="btn ghost" href="/resume" data-i18n="resume">Resume</a>
+      </p>
     </section>
   </main>
 </div>

@@ -17,10 +17,8 @@ Prescription prices in the US are confusing, and the same drug can cost wildly d
 
 As one of only two developers, I owned features end to end: building what product asked for, testing it, and managing releases. I worked across the Angular frontend, the .NET backend, the database, and integrations with several affiliate partners' APIs.
 
-The piece I'm proudest of is **autocorrecting drug search**. Drug names are hard to spell, and a typo meant a user found nothing and left. Making search forgiving dramatically improved how many people found their medication.
-
-> **TODO:** Add one detail about how the search worked (fuzzy matching? a synonym list?) and a before/after number if you have one.
+The piece I'm proudest of is **search-as-you-type drug lookup**. Drug names are hard to spell, and a typo meant a user found nothing and left. As people typed, the search queried our database of brand and generic drug names and showed a list of likely matches, so they could pick the right medication without spelling it perfectly.
 
 ## The result
 
-Monthly transactions grew from **7,000 to over 50,000** while I was there, and RetailMeNot acquired the company in March 2018. I moved over with the product.
+Monthly transactions grew from **7,000 to over 50,000** while I was there, and RetailMeNot acquired the company in March 2018. I moved over with the product, which was later acquired again by GoodRx.
