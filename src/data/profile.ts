@@ -40,7 +40,7 @@ export const experience: Job[] = [
     blurb: 'Enterprise timeshare and resort management platform used by 7–10 resort companies, including Vidanta and Hyatt, across hundreds of resorts.',
     highlights: [
       'Rebuilt the Room Matrix in about 2 months, cutting load times from 30–90 seconds to 1–10 seconds with a faster data API and lazy loading, across hundreds of resorts and thousands of rooms.',
-      'Added drag-and-drop for assigning reservations, moving dates, and blocking rooms for maintenance, fixing the old board’s assignment and display bugs.',
+      'Added drag-and-drop for assigning reservations, moving dates, and blocking rooms, fixing old assignment bugs.',
       'Built key booking-flow screens (room search, booking, and paying with usage or points) on top of backend APIs.',
       'Go-to UI engineer for implementing the modernized design across much of the app.',
       'Early adopter of Claude Code; taught the UI team Claude Skills and helped set up its shared AI context.',
@@ -57,8 +57,7 @@ export const experience: Job[] = [
     end: 'May 2022',
     blurb: 'Video-chat reading app that lets families read children’s books together from anywhere.',
     highlights: [
-      'Hired as engineering lead; led a team of 7 engineers, planning work, reviewing code, and unblocking.',
-      'Ran sprints and task management in a product-manager role alongside engineering.',
+      'Hired as engineering lead of 7 engineers; reviewed code and ran sprints and planning like a product manager.',
       'Helped launch the Readeo app on the App Store and Google Play, built with React, Redux, and Node.js.',
     ],
     caseStudy: '/work/readeo',
@@ -72,9 +71,9 @@ export const experience: Job[] = [
     end: 'Dec 2020',
     blurb: 'Fortune 250 investment and retirement company.',
     highlights: [
+      'Built and maintained WordPress themes throughout my time there, and managed the sites across several hosting services.',
       'Helped build the design library used across the entire company.',
-      'Shipped updates to principal.com, the company’s public-facing site.',
-      'Contributed to open-source Drupal 8 plugins.',
+      'Shipped updates to principal.com and contributed to open-source Drupal 8 plugins.',
     ],
   },
   {
@@ -85,9 +84,9 @@ export const experience: Job[] = [
     end: 'May 2019',
     blurb: 'Prescription price-comparison tool, later acquired by GoodRx.',
     highlights: [
-      'Helped migrate the frontend from Angular to React/Redux.',
-      'Raised frontend unit-test coverage by 40%.',
+      'Helped migrate the frontend from Angular to React/Redux and raised unit-test coverage by 40%.',
       'Assisted the backend migration from .NET to Java/Spring.',
+      'Helped maintain and host Rx Saver’s WordPress themes.',
     ],
     caseStudy: '/work/rx-saver',
   },
@@ -102,8 +101,7 @@ export const experience: Job[] = [
       'One of five initial employees; helped grow monthly transactions from 7,000 to 50,000+ through the acquisition by RetailMeNot.',
       'Built search-as-you-type drug lookup across brand and generic names, suggesting matches while users typed.',
       'Helped transition the product’s frontend from Angular to React.',
-      'Helped build a system that faxed files to pharmacies and doctors.',
-      'Integrated with multiple affiliate APIs across frontend, backend, and database.',
+      'Helped build a system that faxed files to pharmacies and doctors, and integrated multiple affiliate APIs.',
     ],
     caseStudy: '/work/lowestmed',
   },
@@ -118,9 +116,10 @@ export const projects = [
 ];
 
 export const skills = {
-  Frontend: ['React', 'TypeScript', 'Redux', 'Interactive & drag-and-drop UI', 'Performance', 'Design systems', 'CSS / Sass', 'Figma'],
+  Frontend: ['React', 'TypeScript', 'Redux', 'Drag-and-drop UI', 'Performance', 'Design systems', 'CSS / Sass', 'Figma'],
   Backend: ['C# / .NET', 'Node.js', 'SQL Server / Postgres', 'REST APIs'],
   'Tools & AI': ['Claude Code & Claude Skills', 'Git', 'CI/CD', 'Docker', 'Azure / AWS', 'Jest'],
+  'Web & CMS': ['WordPress themes', 'PHP', 'Laravel', 'Drupal', 'Website hosting & management'],
   Other: ['Team leadership', 'Code review & releases', 'Scrum / Agile', 'Fluent Spanish'],
 };
 
@@ -130,7 +129,7 @@ export const education = [
     location: 'Orem, UT',
     detail: 'Bachelor’s, Web Design & Development',
     year: '2018',
-    note: 'Vice President, UVU Men’s Club Lacrosse',
+    note: 'PHP, Laravel, WordPress & hosting coursework · Lacrosse club VP',
   },
   {
     school: 'DevMountain',

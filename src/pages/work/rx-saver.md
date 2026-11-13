@@ -19,7 +19,7 @@ After acquiring LowestMed, RetailMeNot rebranded the product as **Rx Saver**. Th
 - Pushed for testing as we went, raising frontend unit-test coverage by **40%** with Jest and Enzyme.
 - Reviewed peer code for function, design, and consistency.
 - Helped with the backend move from .NET to Java/Spring.
-- Led the redesign and refactor of the marketing site's WordPress theme.
+- Helped maintain and host the marketing site's WordPress themes.
 
 ## The result
 

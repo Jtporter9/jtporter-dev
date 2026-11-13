@@ -59,9 +59,10 @@ import { profile, experience, skills, education, projects } from '../data/profil
       {education.map((e) => (
         <div class="job">
           <div class="job-head">
-            <h3>{e.school}, <span>{e.detail}</span> <span class="muted edu-note">· {e.note}</span></h3>
+            <h3>{e.school}, <span>{e.detail}</span></h3>
             <span class="dates">{e.year}</span>
           </div>
+          <p class="muted note">{e.note}</p>
         </div>
       ))}
     </section>
@@ -95,7 +96,7 @@ import { profile, experience, skills, education, projects } from '../data/profil
   @media (max-width: 640px) { .skills div { grid-template-columns: 1fr; gap: 0; } }
   @media print {
     @page { margin: 0.4in 0.55in; }
-    :global(body) { font-size: 9pt; line-height: 1.36; }
+    :global(body) { font-size: 9pt; line-height: 1.32; }
     .resume { padding: 0; max-width: none; }
     h1 { font-size: 18pt; }
     .summary { margin-top: 0.5rem; }
