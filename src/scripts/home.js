@@ -63,7 +63,7 @@ const ES = {
 
   about1: 'Durante los últimos cuatro años fui ingeniero sénior en <strong>TimeShareWare</strong>, donde reconstruí la <strong>Room Matrix</strong>, el tablero de arrastrar y soltar que empresas de resorts como Vidanta y Hyatt usan para gestionar miles de habitaciones, y reduje su tiempo de carga de hasta 90 segundos a 10 o menos. Es el tipo de interfaz que me encanta: densa, rápida y difícil de hacer bien.',
   about2: 'Antes dirigí un equipo de siete en <strong>Readeo</strong> para lanzar una app de lectura familiar, y fui uno de los primeros cinco empleados de <strong>LowestMed</strong>, que creció 7 veces y fue adquirida por RetailMeNot.',
-  about3: 'Trabajo principalmente con React y TypeScript, uso Claude Code a diario y con gusto resuelvo problemas en inglés o en español. Busco un equipo a largo plazo donde pueda seguir programando y ayudar a definir las decisiones de arquitectura y diseño que mejoran un producto.',
+  about3: 'Trabajo principalmente con React y TypeScript, uso Claude Code a diario y con gusto resuelvo problemas en inglés o en español. También llevo años creando temas de WordPress en PHP y alojando y administrando los sitios donde funcionan. Busco un equipo a largo plazo donde pueda seguir programando y ayudar a definir las decisiones de arquitectura y diseño que mejoran un producto.',
   d_tsw: '2022 — Hoy',
   j_tsw: 'Reconstruí la Room Matrix (cargas de 30–90 s a 1–10 s), construí pantallas clave de reservación y lideré la modernización de la UI para empresas de resorts como Vidanta y Hyatt.',
   j_readeo: 'Contratado como líder. Dirigí un equipo de 7 ingenieros además de sprints y planeación, y lancé la app de Readeo en App Store y Google Play.',
